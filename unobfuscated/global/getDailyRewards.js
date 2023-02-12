@@ -29,7 +29,8 @@
             else {
                 var axios = Object.values(webpackJsonp.push([[], { ['']: (_, a, b) => { a.cache = b.c }, }, [['']],]).cache).find((x) => x.exports?.a?.get).exports.a;
                 axios.get("https://play.blooket.com/api/users/me").then(({ data: { name } }) => {
-                    axios.put("https://play.blooket.com/api/users/add-rewards", { name, addedTokens: 500, addedXp: 300 })
+                    axios.put("https://play.blooket.com/api/users/add-rewards", { name, addedTokens: 2000, addedXp: 1000
+                                                                               })
                         .then(({ data: { dailyReward } }) => alert(`Added max tokens and xp, and got ${dailyReward} daily wheel tokens!`))
                         .catch(() => alert('There was an error when adding rewards.'));
                 }).catch(() => alert('There was an error user data.'));
